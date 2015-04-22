@@ -1,0 +1,7 @@
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_DAL\bin\Debug\Kalender_DAL.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_DAL\bin\Debug\Kalender_DAL.pdb
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_DAL\bin\Debug\Kalender_DTO.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_DAL\bin\Debug\Kalender_DTO.pdb
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_DAL\obj\Debug\Kalender_DAL.csprojResolveAssemblyReference.cache
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_DAL\obj\Debug\Kalender_DAL.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_DAL\obj\Debug\Kalender_DAL.pdb

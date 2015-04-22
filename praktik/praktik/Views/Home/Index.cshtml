@@ -1,0 +1,56 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<Kalender_BL.Activity>
+
+@{
+    ViewBag.Title = "Frimärks-och vykorts kalendern";
+    Layout = "~/Views/shared/_LayoutPage1.cshtml";
+}
+<p class="btn-create">
+
+    @Html.ActionLink("Ny aktivitet", "CreateActivity")
+</p>
+<table id="tbl-data">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Activitet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Arrangor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Ort)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr title="Namn:@item.Namn
+                <br>E-post: @item.Email
+                <br>Mobil: @item.Tel
+                <hr>Mer info: @item.MerInfo">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Activitet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arrangor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ort)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="container-table">
+    @Html.PagedListPager(Model, page => Url.Action("index", new { page }))
+</div>
