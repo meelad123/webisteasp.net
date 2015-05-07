@@ -30,3 +30,10 @@ C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\praktik\bin\PagedList.dl
 C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\praktik\bin\PagedList.Mvc.dll
 C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\praktik\bin\PagedList.xml
 C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\praktik\bin\PagedList.Mvc.xml
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\praktik\bin\SimpleCrypto.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\praktik\bin\System.Net.Http.Formatting.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\praktik\bin\System.Web.Http.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\praktik\bin\System.Web.Http.WebHost.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\praktik\bin\System.Net.Http.Formatting.xml
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\praktik\bin\System.Web.Http.xml
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\praktik\bin\System.Web.Http.WebHost.xml

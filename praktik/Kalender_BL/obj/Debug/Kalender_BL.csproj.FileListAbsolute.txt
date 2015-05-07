@@ -7,3 +7,4 @@ C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\bin\Debug\Ka
 C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\obj\Debug\Kalender_BL.csprojResolveAssemblyReference.cache
 C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\obj\Debug\Kalender_BL.dll
 C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\obj\Debug\Kalender_BL.pdb
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\bin\Debug\Newtonsoft.Json.dll

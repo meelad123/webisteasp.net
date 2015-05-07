@@ -11,14 +11,52 @@
     <script src="~/Content/javaScript.js"></script>
     <link href="~/Content/PagedList.css" rel="stylesheet" />
     <script src="~/Content/tablesort.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script type="text/javascript" src="http://susnet.se/susnetstat.js">
+    </script>
+    <script type="text/javascript">
+        susnet_counter_id = 159747;
+        susnet_security_code = '138018';
+        susnet_node = 0;
+        register();
+    </script>
+    <script src="http://susnet.nu/addStatAction.do?id=159747&amp;size=1271x715&amp;referer=http%3A//jkppf.se/"></script>
 </head>
 <body>
     <div class="header-page">
-        <h3>@ViewBag.Title</h3>
-        <hr />
+        <div class="header-container">
+            <a title="home" href="~/home/index"><img src="~/Content/Images/jkppf-logo.png" style="width:75px;float:left;">
+                <div class="titles-header">
+                    Jönköpings Posthistoriska Förening<br />
+                    <span style="font-size:30px; letter-spacing:8px;">KALENDER</span><br />
+                    @ViewBag.Title
+                </div>
+            </a>
+            
+            <div class="statistics">
+                Besökare totalt:
+                <script type="text/javascript">getTotalUniqueVisitors();</script>
+                <br>
+                Besökare idag:
+                <script type="text/javascript">getTodayUniqueVisitors();</script>
+                <br>
+                Besökare just nu:
+                <script type="text/javascript">getOnlineVisitors();</script>
+            </div>
+        </div>
     </div>
     <div class="body-page">
         @RenderBody()
+        <div class="login-admin">
+            @if (Session["user"] != null)
+            {
+                @Html.ActionLink("Logga ut", "Logout", "Home")
+            }
+            else
+            {
+                @Html.ActionLink("Admin", "Admin", "Home")
+            }
+        </div>
     </div>
 </body>
 </html>
