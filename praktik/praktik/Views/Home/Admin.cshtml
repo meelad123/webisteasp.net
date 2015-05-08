@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/shared/_LayoutPage1.cshtml";
+}
+<div class="admin-wrapper">
+    <h2>Admin</h2>
+    @using (Html.BeginForm("Admin", "Home"))
+    {
+        <div class="login-form">
+            @Html.Label("Username: ", new { @class ="login-label"}) <br />
+            @Html.TextBox("username")<br />
+            @Html.Label("Password: ") <br />
+            @Html.Password("password")<br />
+        </div>
+        <input class="admin-submit" type="submit" value="Login" />
+    }
+    @ViewBag.WrongInfo
+    <br />
+</div>

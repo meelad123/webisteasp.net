@@ -1,0 +1,97 @@
+﻿@model Kalender_BL.Activity
+
+@{
+    ViewBag.Title = "Redigera Aktivitet";
+    Layout = "~/Views/shared/_LayoutPage1.cshtml";
+}
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset class="create-fieldset">
+        <legend class="create-legend">Redigera Activitet</legend>
+        <br />
+        <div class="editor-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Datum)
+            </div>
+            @Html.EditorFor(model => model.Datum)
+            @Html.ValidationMessageFor(model => model.Datum)
+        </div>
+
+        <div class="editor-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Activitet)
+            </div>
+            @Html.EditorFor(model => model.Activitet)
+            @Html.ValidationMessageFor(model => model.Activitet)
+        </div>
+
+        <div class="editor-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Arrangor)
+            </div>
+            @Html.EditorFor(model => model.Arrangor)
+            @Html.ValidationMessageFor(model => model.Arrangor)
+        </div>
+
+        <div class="editor-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Ort)
+            </div>
+            @Html.EditorFor(model => model.Ort)
+            @Html.ValidationMessageFor(model => model.Ort)
+        </div>
+
+        <div class="editor-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Namn)
+            </div>
+            @Html.EditorFor(model => model.Namn)
+            @Html.ValidationMessageFor(model => model.Namn)
+        </div>
+
+        <div class="editor-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Tel)
+            </div>
+            @Html.EditorFor(model => model.Tel)
+            @Html.ValidationMessageFor(model => model.Tel)
+        </div>
+
+        <div class="editor-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Email)
+            </div>
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Hemsida)
+            </div>
+            @Html.EditorFor(model => model.Hemsida)
+            @Html.ValidationMessageFor(model => model.Hemsida)
+        </div>
+
+        <div class="editor-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.MerInfo)
+            </div>
+            @Html.EditorFor(model => model.MerInfo)
+            @Html.ValidationMessageFor(model => model.MerInfo)
+        </div>
+        <hr />
+        <p class="end-form-create">
+            @Html.ActionLink("Tillbaka", "Index")
+            <input type="submit" value="Uppdatera" />
+        </p>
+        <br />
+        <br />
+        <br />
+    </fieldset>
+}
+
