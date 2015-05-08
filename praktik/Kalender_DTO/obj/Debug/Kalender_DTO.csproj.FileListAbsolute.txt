@@ -3,3 +3,7 @@ C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_DTO\bin\Debug\K
 C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.csprojResolveAssemblyReference.cache
 C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.dll
 C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.pdb
+C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DTO\bin\Debug\Kalender_DTO.dll
+C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DTO\bin\Debug\Kalender_DTO.pdb
+C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.dll
+C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.pdb

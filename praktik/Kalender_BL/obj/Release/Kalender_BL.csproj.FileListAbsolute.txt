@@ -1,0 +1,10 @@
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\bin\Release\Kalender_BL.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\bin\Release\Kalender_BL.pdb
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\bin\Release\Kalender_DAL.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\bin\Release\Kalender_DTO.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\bin\Release\Newtonsoft.Json.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\bin\Release\Kalender_DAL.pdb
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\bin\Release\Kalender_DTO.pdb
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\obj\Release\Kalender_BL.csprojResolveAssemblyReference.cache
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\obj\Release\Kalender_BL.dll
+C:\Users\alem1324\Desktop\JTH2\praktik aljodata\praktik\Kalender_BL\obj\Release\Kalender_BL.pdb
