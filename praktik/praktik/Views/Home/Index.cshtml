@@ -24,67 +24,69 @@
         <input type="submit" value="Filtera" />
     }
 </div>
-<table id="tbl-data">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.First().Datum)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.First().Activitet)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.First().Arrangor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.First().Ort)
-            </th>
-            @if (Session["user"] != null)
-            {
+<div class="table-responsive">
+    <table id="tbl-data" class="table">
+        <thead>
+            <tr>
                 <th>
-                    Admin Funktioner
+                    @Html.DisplayNameFor(model => model.First().Datum)
                 </th>
-            }
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            using (Html.BeginForm("Delete", "Home", new { aDatum = item.Datum, aNamn = item.Arrangor }))
+                <th>
+                    @Html.DisplayNameFor(model => model.First().Activitet)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().Arrangor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().Ort)
+                </th>
+                @if (Session["user"] != null)
+                {
+                    <th>
+                        Admin Funktioner
+                    </th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
             {
-                <tr title="Namn:@item.Namn
-                    <br>E-post: @item.Email
-                    <br>Mobil: @item.Tel
-                    <hr>Mer info: @item.MerInfo">
-                    <td>
-                        @{
-                string datum = item.Datum.Date.ToString("dd/MM-yyyy");
-                        }
-                        @Html.DisplayFor(modelItem => datum)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Activitet)
-                    </td>
-                    <td>
-                        <a href="@item.Hemsida" target="_blank">@item.Arrangor</a>
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Ort)
-                    </td>
-                    @if (Session["user"] != null)
-                    {
+                using (Html.BeginForm("Delete", "Home", new { aDatum = item.Datum, aNamn = item.Arrangor }))
+                {
+                    <tr title="Namn:@item.Namn
+                        <br>E-post: @item.Email
+                        <br>Mobil: @item.Tel
+                        <hr>Mer info: @item.MerInfo">
                         <td>
-                            @Html.ActionLink("Redigera", "EditActivity", new { aDatum = item.Datum, aNamn = item.Arrangor }) |
-                            <input type="submit" value="Ta bort"
-                                   onclick="return confirm('Ta bort?');">
+                            @{
+                    string datum = item.Datum.Date.ToString("dd/MM-yyyy");
+                            }
+                            @Html.DisplayFor(modelItem => datum)
                         </td>
-                    }
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Activitet)
+                        </td>
+                        <td>
+                            <a href="@item.Hemsida" target="_blank">@item.Arrangor</a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ort)
+                        </td>
+                        @if (Session["user"] != null)
+                        {
+                            <td>
+                                @Html.ActionLink("Redigera", "EditActivity", new { aDatum = item.Datum, aNamn = item.Arrangor }) |
+                                <input type="submit" value="Ta bort"
+                                       onclick="return confirm('Ta bort?');">
+                            </td>
+                        }
 
-                </tr>
+                    </tr>
+                }
             }
-        }
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>
 <div class="container-table">
     @Html.PagedListPager(Model, page => Url.Action("index", new { page, filter = Request.QueryString["filter"] }))
 </div>

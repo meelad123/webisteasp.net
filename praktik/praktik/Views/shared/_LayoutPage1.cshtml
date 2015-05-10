@@ -4,6 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -25,7 +29,8 @@
 <body>
     <div class="header-page">
         <div class="header-container">
-            <a title="home" href="~/home/index"><img src="~/Content/Images/jkppf-logo.png" style="width:75px;float:left;">
+            <a  href="~/home/index">
+                <img class="hidden-xs" src="~/Content/Images/jkppf-logo.png" style="width:75px;float:left;">
                 <div class="titles-header">
                     Jönköpings Posthistoriska Förening<br />
                     <span style="font-size:30px; letter-spacing:8px;">KALENDER</span><br />
@@ -33,7 +38,7 @@
                 </div>
             </a>
             
-            <div class="statistics">
+            <div class="hidden-sm hidden-xs statistics">
                 Besökare totalt:
                 <script type="text/javascript">getTotalUniqueVisitors();</script>
                 <br>

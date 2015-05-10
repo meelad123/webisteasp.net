@@ -12,3 +12,10 @@ C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DAL\bin\Debug
 C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DAL\obj\Debug\Kalender_DAL.csprojResolveAssemblyReference.cache
 C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DAL\obj\Debug\Kalender_DAL.dll
 C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DAL\obj\Debug\Kalender_DAL.pdb
+D:\Github\webisteasp.net\praktik\Kalender_DAL\bin\Debug\Kalender_DAL.dll
+D:\Github\webisteasp.net\praktik\Kalender_DAL\bin\Debug\Kalender_DAL.pdb
+D:\Github\webisteasp.net\praktik\Kalender_DAL\bin\Debug\Kalender_DTO.dll
+D:\Github\webisteasp.net\praktik\Kalender_DAL\bin\Debug\Kalender_DTO.pdb
+D:\Github\webisteasp.net\praktik\Kalender_DAL\obj\Debug\Kalender_DAL.csprojResolveAssemblyReference.cache
+D:\Github\webisteasp.net\praktik\Kalender_DAL\obj\Debug\Kalender_DAL.dll
+D:\Github\webisteasp.net\praktik\Kalender_DAL\obj\Debug\Kalender_DAL.pdb

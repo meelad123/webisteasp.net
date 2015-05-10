@@ -297,7 +297,6 @@
     font-style: normal;
     height: 41px;
     line-height: 41px;
-    width: 100px;
     padding-left: 28px;
     text-decoration: none;
     text-align: left;
@@ -315,8 +314,6 @@
 ***********layout***************
 ******************************/
 .header-page {
-    position:fixed;
-    top:0px;
     background-color: Black;
     width: 100%;
     color:white;
@@ -361,7 +358,7 @@
 .body-page {
     background:#fff;
     width: 70%;
-    margin:95px auto;
+    margin:20px auto;
     padding-top: 20px;
     border-radius: 7px 7px 7px 7px;
     -moz-border-radius: 7px 7px 7px 7px;

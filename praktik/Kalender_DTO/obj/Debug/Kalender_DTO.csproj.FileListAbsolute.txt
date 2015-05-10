@@ -7,3 +7,8 @@ C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DTO\bin\Debug
 C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DTO\bin\Debug\Kalender_DTO.pdb
 C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.dll
 C:\Users\alem1324\Documents\GitHub\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.pdb
+D:\Github\webisteasp.net\praktik\Kalender_DTO\bin\Debug\Kalender_DTO.dll
+D:\Github\webisteasp.net\praktik\Kalender_DTO\bin\Debug\Kalender_DTO.pdb
+D:\Github\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.csprojResolveAssemblyReference.cache
+D:\Github\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.dll
+D:\Github\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.pdb
