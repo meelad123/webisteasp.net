@@ -276,6 +276,7 @@
 }
 /**************endfieldset*************/
 .btn-create{
+
     margin:25px auto;
     text-align:center;
 }
@@ -298,6 +299,7 @@
     height: 41px;
     line-height: 41px;
     padding-left: 28px;
+    padding-right: 10px;
     text-decoration: none;
     text-align: left;
 }

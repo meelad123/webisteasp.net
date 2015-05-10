@@ -80,7 +80,6 @@ namespace Kalender_BL
             get { return _aDTO._email; }
             set { _aDTO._email = value; }
         }
-        [Url(ErrorMessage = "Ogiltig url. Den ska vara som: http://www.example.se")]
         [Required(ErrorMessage = "Kan inte vara tom!")]
         public string Hemsida
         {

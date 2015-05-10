@@ -64,6 +64,12 @@ namespace praktik.Controllers
                 }
                 else
                 {
+                    string url = b.Hemsida;
+                    if(!url.Contains("http://"))
+                    {
+                        url = "http://" + url;
+                        b.Hemsida = url;
+                    }
                     Activity.insertActivity(b);
                     return RedirectToAction("Index");
                 }
@@ -170,6 +176,12 @@ namespace praktik.Controllers
                         TryUpdateModel(b);
                         if (ModelState.IsValid)
                         {
+                            string url = b.Hemsida;
+                            if (!url.Contains("http://"))
+                            {
+                                url = "http://" + url;
+                                b.Hemsida = url;
+                            }
                             b.saveActivity();
                             return RedirectToAction("Index");
                         }
