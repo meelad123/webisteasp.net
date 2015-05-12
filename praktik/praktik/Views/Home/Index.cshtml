@@ -29,16 +29,17 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.First().Datum)
+                    @Html.ActionLink("Datum", "Index", new { sorting = ViewBag.SortingParaDate, filter = Request.QueryString["filter"] }, new { @class = "text-primary" })
+
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.First().Activitet)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.First().Arrangor)
+                    @Html.ActionLink("Arrangör", "Index", new { sorting = ViewBag.SortingParaArr, filter = Request.QueryString["filter"] })
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.First().Ort)
+                    @Html.ActionLink("ort", "Index", new { sorting = ViewBag.SortingParaOrt, filter = Request.QueryString["filter"] })
                 </th>
                 @if (Session["user"] != null)
                 {
@@ -88,7 +89,7 @@
     </table>
 </div>
 <div class="container-table">
-    @Html.PagedListPager(Model, page => Url.Action("index", new { page, filter = Request.QueryString["filter"] }))
+    @Html.PagedListPager(Model, page => Url.Action("index", new { page, filter = Request.QueryString["filter"], sorting = Request["sorting"] }))
 </div>
 <p class="btn-create">
 

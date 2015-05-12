@@ -8,9 +8,5 @@
     });
 });
 
-$(document).ready(function () {
-    $("#tbl-data").tablesorter();
-}
-);
 
 

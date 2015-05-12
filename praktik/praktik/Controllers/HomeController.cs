@@ -20,10 +20,42 @@ namespace praktik.Controllers
         {
             List<string> aL = Activity.getActivityName();
             ViewBag.ActivityList = aL;
+
+            ViewBag.SortingParaDate = string.IsNullOrEmpty(sorting) ? "Datum desc" : "";
+            ViewBag.SortingParaArr = sorting == "Arrangor" ? "Arrangor desc" : "Arrangor";
+            ViewBag.SortingParaOrt = sorting == "Ort"? "Ort desc" : "Ort";
+
+
+            var activity = Activity.getAllActivities().AsQueryable();
+
             if (filter != null && filter != "showAll")
-                return View(Activity.getAllActivities().Where(x => x.Activitet.StartsWith(filter.Trim()) || filter == null).ToList().ToPagedList(page ?? 1, 10));
+                activity = activity.Where(x => x.Activitet.StartsWith(filter.Trim()) || filter == null);
             else
-                return View(Activity.getAllActivities().ToList().ToPagedList(page ?? 1, 10));
+                activity = Activity.getAllActivities().AsQueryable();
+
+            switch (sorting)
+            {
+                case "Arrangor desc":
+                    activity = activity.OrderByDescending(x => x.Arrangor);
+                    break;
+                case "Arrangor":
+                    activity = activity.OrderBy(x => x.Arrangor);
+                    break;
+                case "Ort desc":
+                    activity = activity.OrderByDescending(x => x.Ort);
+                    break;
+                case "Ort":
+                    activity = activity.OrderBy(x => x.Ort);
+                    break;
+                case "Datum desc":
+                    activity = activity.OrderByDescending(x => x.Datum);
+                    break;
+                default:
+                    activity = activity.OrderBy(x => x.Datum);
+                    break;
+            }
+
+            return View(activity.ToPagedList(page ?? 1, 10));
         }
 
         // GET: /Home/CreateActivity
