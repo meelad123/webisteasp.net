@@ -16,7 +16,7 @@ namespace praktik.Controllers
         //
         // GET: /Home/
 
-        public ActionResult Index(int? page, string filter)
+        public ActionResult Index(int? page, string filter, string sorting)
         {
             List<string> aL = Activity.getActivityName();
             ViewBag.ActivityList = aL;
