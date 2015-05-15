@@ -5,7 +5,20 @@
     Layout = "~/Views/shared/_LayoutPage1.cshtml";
 }
 
-
+@*<form role="form">
+    <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd">
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>*@
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
@@ -13,13 +26,13 @@
     <fieldset class="create-fieldset">
         <legend class="create-legend">Redigera Activitet</legend>
         <br />
-        <div class="editor-field">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.Datum)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Datum)
+            <div class="form-control">
+                @Html.EditorFor(model => model.Datum)
             </div>
-            @Html.EditorFor(model => model.Datum)
-            @Html.ValidationMessageFor(model => model.Datum)
         </div>
+        @Html.ValidationMessageFor(model => model.Datum)
 
         <div class="editor-field">
             <div class="editor-label">
