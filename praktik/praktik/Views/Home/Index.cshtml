@@ -21,7 +21,7 @@
                 }
             </select>
         }
-        <input type="submit" value="Sök" />
+        <input class="btn btn-default btn-sm" type="submit" value="Sök" />
     }
 </div>
 <div class="table-responsive">
@@ -29,6 +29,7 @@
         <thead>
             <tr>
                 <th>
+                    <span class="glyphicon glyphicon-sort-by-attributes" style="padding-right:10px;"></span>
                     @Html.ActionLink("Datum", "Index", new { sorting = ViewBag.SortingParaDate, filter = Request.QueryString["filter"] }, new { @class = "text-primary" })
 
                 </th>
@@ -36,9 +37,11 @@
                     @Html.DisplayNameFor(model => model.First().Activitet)
                 </th>
                 <th>
+                    <span class="glyphicon glyphicon-sort-by-attributes" style="padding-right:10px;"></span>
                     @Html.ActionLink("Arrangör", "Index", new { sorting = ViewBag.SortingParaArr, filter = Request.QueryString["filter"] })
                 </th>
                 <th>
+                    <span class="glyphicon glyphicon-sort-by-attributes" style="padding-right:10px;"></span>
                     @Html.ActionLink("ort", "Index", new { sorting = ViewBag.SortingParaOrt, filter = Request.QueryString["filter"] })
                 </th>
                 @if (Session["user"] != null)
@@ -92,6 +95,5 @@
     @Html.PagedListPager(Model, page => Url.Action("index", new { page, filter = Request.QueryString["filter"], sorting = Request["sorting"] }))
 </div>
 <p class="btn-create">
-
     @Html.ActionLink("Ny aktivitet", "CreateActivity")
 </p>

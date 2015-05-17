@@ -31,6 +31,7 @@ namespace Kalender_BL
         #region properties
         [Required(ErrorMessage = "Kan inte vara tom!")]
         [Display(Name = "Datum")]
+        [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [DataType(DataType.DateTime, ErrorMessage="Fel datum format!")]
         public DateTime Datum
         { 

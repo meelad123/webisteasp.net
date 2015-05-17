@@ -226,8 +226,7 @@ namespace Kalender_DAL
                 b._date + "', Aktivitet='" + b._activity + "', Arrangor='"
                 + b._arranger + "', Ort='" + b._ort +
                 "', Namn='" + b._name + "', Tel='" + b._tel + "', Email='" + b._email +
-                "', Hemsida='" + b._hemsida + "', MerInfo='" + b._merinfo + "' WHERE Date='" + b._date +
-                "' AND Arrangor='" + b._arranger + "';";
+                "', Hemsida='" + b._hemsida + "', MerInfo='" + b._merinfo + "' WHERE Arrangor='" + b._arranger + "';";
             string _connectionString = DataSource.GetConnectionString("kalender");
             SqlConnection con = new SqlConnection(_connectionString);
             SqlCommand cmd = new SqlCommand(SQL, con);

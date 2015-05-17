@@ -5,106 +5,111 @@
     Layout = "~/Views/shared/_LayoutPage1.cshtml";
 }
 
-@*<form role="form">
-    <div class="form-group">
-        <label for="email">Email address:</label>
-        <input type="email" class="form-control" id="email">
-    </div>
-    <div class="form-group">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd">
-    </div>
-    <div class="checkbox">
-        <label><input type="checkbox"> Remember me</label>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>*@
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+<script type="text/javascript">
+    $(function () {
+        $("input:text.date-txb").datepicker({ dateFormat: "dd/MM/yy" });
+        $("input, select").addClass("form-control");
+        $("form").addClass("form-horizontal");
+        $(".editor-field").addClass("col-sm-5");
+        $("label").addClass("control-label col-sm-2");
 
-    <fieldset class="create-fieldset">
-        <legend class="create-legend">Redigera Activitet</legend>
-        <br />
-        <div class="form-group">
-            @Html.LabelFor(model => model.Datum)
-            <div class="form-control">
-                @Html.EditorFor(model => model.Datum)
+    });
+</script>
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "Fel inmatning, kolla fälten nedan!")
+
+        <fieldset class="create-fieldset">
+            <legend class="create-legend">Redigera Activitet</legend>
+            <br />
+            <div class="form-group">
+                @Html.LabelFor(model => model.Datum)
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Datum)
+                    @Html.ValidationMessageFor(model => model.Datum)
+                </div>
             </div>
-        </div>
-        @Html.ValidationMessageFor(model => model.Datum)
 
-        <div class="editor-field">
-            <div class="editor-label">
+            <div class="form-group">
                 @Html.LabelFor(model => model.Activitet)
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Activitet)
+                    @Html.ValidationMessageFor(model => model.Activitet)
+                </div>
             </div>
-            @Html.EditorFor(model => model.Activitet)
-            @Html.ValidationMessageFor(model => model.Activitet)
-        </div>
 
-        <div class="editor-field">
-            <div class="editor-label">
+            <div class="form-group">
                 @Html.LabelFor(model => model.Arrangor)
-            </div>
-            @Html.EditorFor(model => model.Arrangor)
-            @Html.ValidationMessageFor(model => model.Arrangor)
-        </div>
 
-        <div class="editor-field">
-            <div class="editor-label">
+                <div class="editor-field">
+                    @Html.HiddenFor(model => model.Arrangor)
+                    @Html.DisplayFor(model => model.Arrangor)
+                    @Html.ValidationMessageFor(model => model.Arrangor)
+                </div>
+            </div>
+
+            <div class="form-group">
                 @Html.LabelFor(model => model.Ort)
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Ort)
+                    @Html.ValidationMessageFor(model => model.Ort)
+                </div>
             </div>
-            @Html.EditorFor(model => model.Ort)
-            @Html.ValidationMessageFor(model => model.Ort)
-        </div>
 
-        <div class="editor-field">
-            <div class="editor-label">
+            <div class="form-group">
                 @Html.LabelFor(model => model.Namn)
-            </div>
-            @Html.EditorFor(model => model.Namn)
-            @Html.ValidationMessageFor(model => model.Namn)
-        </div>
 
-        <div class="editor-field">
-            <div class="editor-label">
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Namn)
+                    @Html.ValidationMessageFor(model => model.Namn)
+                </div>
+            </div>
+
+            <div class="form-group">
                 @Html.LabelFor(model => model.Tel)
-            </div>
-            @Html.EditorFor(model => model.Tel)
-            @Html.ValidationMessageFor(model => model.Tel)
-        </div>
 
-        <div class="editor-field">
-            <div class="editor-label">
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Tel)
+                    @Html.ValidationMessageFor(model => model.Tel)
+                </div>
+            </div>
+
+            <div class="form-group">
                 @Html.LabelFor(model => model.Email)
-            </div>
-            @Html.EditorFor(model => model.Email)
-            @Html.ValidationMessageFor(model => model.Email)
-        </div>
 
-        <div class="editor-field">
-            <div class="editor-label">
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Email)
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+            </div>
+
+            <div class="form-group">
                 @Html.LabelFor(model => model.Hemsida)
-            </div>
-            @Html.EditorFor(model => model.Hemsida)
-            @Html.ValidationMessageFor(model => model.Hemsida)
-        </div>
 
-        <div class="editor-field">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.MerInfo)
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Hemsida)
+                    @Html.ValidationMessageFor(model => model.Hemsida)
+                </div>
             </div>
-            @Html.EditorFor(model => model.MerInfo)
-            @Html.ValidationMessageFor(model => model.MerInfo)
-        </div>
-        <hr />
-        <p class="end-form-create">
-            @Html.ActionLink("Tillbaka", "Index")
-            <input type="submit" value="Uppdatera" />
-        </p>
-        <br />
-        <br />
-        <br />
-    </fieldset>
-}
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.MerInfo)
+
+                <div class="editor-field">
+                    @Html.TextAreaFor(model => model.MerInfo, new { @class = "form-control col-sm-5" })
+                    @Html.ValidationMessageFor(model => model.MerInfo)
+                </div>
+            </div>
+
+            <p>
+                <input class="btn btn-md btn-primary" type="submit" value="Uppdatera" />
+            </p>
+        </fieldset>
+    }
+</div>
+    <div>
+        @Html.ActionLink("Tillbaka", "Index")
+    </div>
 
