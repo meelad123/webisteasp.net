@@ -35,7 +35,19 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Activitet)
                 <div class="editor-field">
-                    @Html.EditorFor(model => model.Activitet)
+                    @{ List<SelectListItem> selectList = new List<SelectListItem>();
+                     if (ViewBag.ActivityList != null)
+                     {
+                         foreach (var item in ViewBag.ActivityList)
+                         {
+                             SelectListItem i = new SelectListItem();
+                             i.Text = item;
+                             i.Value = item;
+                             selectList.Add(i);
+                         }
+                     }
+                    }
+                    @Html.DropDownListFor(model => model.Activitet, selectList)
                     @Html.ValidationMessageFor(model => model.Activitet)
                 </div>
             </div>

@@ -17,6 +17,7 @@ namespace Kalender_DTO
         {
             if (aDto != null)
             {
+                this._id = aDto._id;
                 this._activity = aDto._activity;
                 this._arranger = aDto._arranger;
                 this._date = aDto._date;
@@ -31,6 +32,7 @@ namespace Kalender_DTO
         #endregion
 
         #region variabler
+        public int _id;
         public DateTime _date;
         public string
             _activity,

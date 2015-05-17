@@ -170,25 +170,23 @@ namespace praktik.Controllers
         }
 
 
-        public ActionResult EditActivity(string aNamn, DateTime aDatum, int? page)
+        public ActionResult EditActivity(int ID, int? page)
         {
+            List<string> aL = Activity.getActivityName();
+            ViewBag.ActivityList = aL;
             if (Session["user"] != null)
             {
                 UsersMod user = (UsersMod)Session["user"];
                 if (user.Type == "Admin")
-                    return View(Activity.getActivityByName(aNamn, aDatum));
+                    return View(Activity.getActivityByName(ID));
                 else
                 {
-                    List<string> aL = Activity.getActivityName();
-                    ViewBag.ActivityList = aL;
                     Session["user"] = null;
                     return View("Index", Activity.getAllActivities().ToList().ToPagedList(page ?? 1, 10));
                 }
             }
             else
             {
-                List<string> aL = Activity.getActivityName();
-                ViewBag.ActivityList = aL;
                 Session["user"] = null;
                 return View("Index", Activity.getAllActivities().ToList().ToPagedList(page ?? 1, 10));
             }
@@ -197,6 +195,8 @@ namespace praktik.Controllers
         [HttpPost]
         public ActionResult EditActivity(int? page)
         {
+            List<string> aL = Activity.getActivityName();
+            ViewBag.ActivityList = aL;
             try
             {
                 if (Session["user"] != null)
@@ -222,16 +222,12 @@ namespace praktik.Controllers
                     }
                     else
                     {
-                        List<string> aL = Activity.getActivityName();
-                        ViewBag.ActivityList = aL;
                         Session["user"] = null;
                         return View("Index", Activity.getAllActivities().ToList().ToPagedList(page ?? 1, 10));
                     }
                 }
                 else
                 {
-                    List<string> aL = Activity.getActivityName();
-                    ViewBag.ActivityList = aL;
                     Session["user"] = null;
                     return View("Index", Activity.getAllActivities().ToList().ToPagedList(page ?? 1, 10));
                 }
@@ -243,14 +239,14 @@ namespace praktik.Controllers
         }
 
         [HttpPost]
-        public ActionResult Delete(string aNamn, DateTime aDatum, int? page)
+        public ActionResult Delete(int ID, int? page)
         {
             if (Session["user"] != null)
             {
                 UsersMod user = (UsersMod)Session["user"];
                 if (user.Type == "Admin")
                 {
-                    Activity b = Activity.getActivityByName(aNamn, aDatum);
+                    Activity b = Activity.getActivityByName(ID);
                     b.removeActivity();
                     return RedirectToAction("Index");
                 }

@@ -55,7 +55,7 @@
         <tbody>
             @foreach (var item in Model)
             {
-                using (Html.BeginForm("Delete", "Home", new { aDatum = item.Datum, aNamn = item.Arrangor }))
+                using (Html.BeginForm("Delete", "Home", new { ID = item.ID }))
                 {
                     <tr title="Namn:@item.Namn
                         <br>E-post: @item.Email
@@ -79,7 +79,7 @@
                         @if (Session["user"] != null)
                         {
                             <td>
-                                @Html.ActionLink("Redigera", "EditActivity", new { aDatum = item.Datum, aNamn = item.Arrangor }) |
+                                @Html.ActionLink("Redigera", "EditActivity", new { ID = item.ID}) |
                                 <input type="submit" value="Ta bort"
                                        onclick="return confirm('Ta bort?');">
                             </td>

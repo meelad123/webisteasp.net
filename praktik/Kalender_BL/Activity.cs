@@ -29,6 +29,12 @@ namespace Kalender_BL
         #endregion
 
         #region properties
+
+        public int ID
+        {
+            get { return _aDTO._id; }
+            set { _aDTO._id = value; }
+        }
         [Required(ErrorMessage = "Kan inte vara tom!")]
         [Display(Name = "Datum")]
         [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
@@ -129,9 +135,9 @@ namespace Kalender_BL
             aDTO._tel = a.Tel;
             DataAccess.insertActivity(aDTO);
         }
-        public static Activity getActivityByName(string aNamn, DateTime aDatum)
+        public static Activity getActivityByName(int ID)
         {
-            Activity b = new Activity(DataAccess.getActivityByName(aNamn, aDatum));
+            Activity b = new Activity(DataAccess.getActivityByName(ID));
             return b;
         }
 

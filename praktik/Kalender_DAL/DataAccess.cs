@@ -28,6 +28,7 @@ namespace Kalender_DAL
                     if (Convert.ToDateTime(dar["Date"]) >= DateTime.Now)
                     {
                         Activity_DTO newA = new Activity_DTO();
+                        newA._id = Convert.ToInt32(dar["ID"]);
                         if (!(dar["Aktivitet"] is DBNull))
                             newA._activity = dar["Aktivitet"] as string;
                         else newA._activity = "Finns ej";
@@ -183,11 +184,11 @@ namespace Kalender_DAL
             }
         }
 
-        public static Activity_DTO getActivityByName(string aNamn, DateTime aDatum)
+        public static Activity_DTO getActivityByName(int ID)
         {
             Activity_DTO a = new Activity_DTO();
             string SQL = "SELECT * FROM Kalender" +
-                " WHERE Kalender.Arrangor = " + "'" + aNamn + "'" + "AND Kalender.Date= '" + aDatum + "';";
+                " WHERE Kalender.ID = " + ID + ";";
             string _connectionString = DataSource.GetConnectionString("kalender");
             SqlConnection con = new SqlConnection(_connectionString);
             SqlCommand cmd = new SqlCommand(SQL, con);
@@ -197,6 +198,7 @@ namespace Kalender_DAL
                 SqlDataReader dar = cmd.ExecuteReader();
                 while (dar.Read())
                 {
+                    a._id = Convert.ToInt32(dar["ID"]);
                     a._activity = dar["Aktivitet"] as string;
                     a._arranger = dar["Arrangor"] as string;
                     a._date = Convert.ToDateTime(dar["Date"]);
@@ -226,7 +228,7 @@ namespace Kalender_DAL
                 b._date + "', Aktivitet='" + b._activity + "', Arrangor='"
                 + b._arranger + "', Ort='" + b._ort +
                 "', Namn='" + b._name + "', Tel='" + b._tel + "', Email='" + b._email +
-                "', Hemsida='" + b._hemsida + "', MerInfo='" + b._merinfo + "' WHERE Arrangor='" + b._arranger + "';";
+                "', Hemsida='" + b._hemsida + "', MerInfo='" + b._merinfo + "' WHERE ID='" + b._id + "';";
             string _connectionString = DataSource.GetConnectionString("kalender");
             SqlConnection con = new SqlConnection(_connectionString);
             SqlCommand cmd = new SqlCommand(SQL, con);
@@ -248,8 +250,7 @@ namespace Kalender_DAL
         public static void removeActivity(Activity_DTO b)
         {
             string SQL = "DELETE FROM Kalender" +
-                         " WHERE Date='" + b._date +
-                        "' AND Arrangor='" + b._arranger + "';";
+                         " WHERE ID=" + b._id +";";
             string _connectionString = DataSource.GetConnectionString("kalender");
             SqlConnection con = new SqlConnection(_connectionString);
             SqlCommand cmd = new SqlCommand(SQL, con);
