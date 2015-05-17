@@ -1,122 +1,135 @@
 ﻿@model Kalender_BL.Activity
 
 @{
-    ViewBag.Title = "Ny Aktivitet";
+    ViewBag.Title = "CreateActivity";
     Layout = "~/Views/shared/_LayoutPage1.cshtml";
 }
+
 <script type="text/javascript">
     $(function () {
-        $("input:text.date-txb").datepicker({ dateFormat: "yy/MM/dd" });
-    });
+        $("input:text.date-txb").datepicker({ dateFormat: "dd/MM/yy" });
+        $("input, select").addClass("form-control");
+        $("form").addClass("form-horizontal");
+        $(".editor-field").addClass("col-sm-5");
+        $("label").addClass("control-label col-sm-2");
 
+    });
 </script>
-<script src="~/Content/javaScript.js"></script>
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
+
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
 
     <fieldset class="create-fieldset">
-        <legend class="create-legend">Lägg till ny aktivitet</legend>
-        <br />
-        @Html.ValidationSummary(true, "Fel inmatning, kolla fälten nedan!", new { @class = "err-msg" })
-        @if (ViewBag.Message != null)
+        <legend class="create-legend">Lägg till ny aktivitet <span class="bg-primary" style="font-size:12px;">Alla fält är obligatoriska</span></legend>
+        @Html.ValidationSummary(true, "Fel inmatning, kolla fälten nedan!", new { @class="err-msg"})
+        @if(ViewBag.Message != null)
         {
             <span class="recaptcha-span">
                 @ViewBag.Message
             </span>
         }
         <p class="info-create">
-            Info:
+            Info*:
         </p>
-        <div class="editor-field">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.Datum) *
+        <div class="form-group">
+            @Html.LabelFor(model => model.Datum)
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Datum)
+                @Html.ValidationMessageFor(model => model.Datum)
             </div>
-            @Html.EditorFor(model => model.Datum)
-            @Html.ValidationMessageFor(model => model.Datum)
         </div>
-        <br />
-        <div class="editor-field">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.Activitet) *
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Activitet)
+            <div class="editor-field">
+                @{ List<SelectListItem> selectList = new List<SelectListItem>();
+                   if(ViewBag.ActivityList != null)
+                   {
+                       foreach (var item in ViewBag.ActivityList)
+                       {
+                           SelectListItem i = new SelectListItem();
+                           i.Text = item;
+                           i.Value = item;
+                           selectList.Add(i); 
+                       }
+                   }
+                }
+                @Html.DropDownListFor(model => model.Activitet, selectList)
+                @Html.ValidationMessageFor(model => model.Activitet)
             </div>
-            @{ List<SelectListItem> selectList = new List<SelectListItem>();
-               if (ViewBag.ActivityList != null)
-             {
-                 foreach (var item in ViewBag.ActivityList)
-                 {
-                     SelectListItem i = new SelectListItem();
-                     i.Text = item;
-                     i.Value = item;
-                     selectList.Add(i);
-                 }
-             }
-            }
-            @Html.DropDownListFor(model => model.Activitet, selectList)
-            @Html.ValidationMessageFor(model => model.Activitet)
         </div>
-        <br />
-        <div class="editor-field">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.Arrangor) *
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Arrangor)
+
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Arrangor)
+                @Html.ValidationMessageFor(model => model.Arrangor)
             </div>
-            @Html.EditorFor(model => model.Arrangor)
-            @Html.ValidationMessageFor(model => model.Arrangor)
         </div>
-        <br />
-        <div class="editor-field">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.Ort) *
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ort)
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Ort)
+                @Html.ValidationMessageFor(model => model.Ort)
             </div>
-            @Html.EditorFor(model => model.Ort)
-            @Html.ValidationMessageFor(model => model.Ort)
         </div>
-        <br />
         <p class="info-create">
-            Kontakt:
+            Kontakt*:
         </p>
-        <div class="editor-field">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.Namn) *
+        <div class="form-group">
+            @Html.LabelFor(model => model.Namn)
+
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Namn)
+                @Html.ValidationMessageFor(model => model.Namn)
             </div>
-            @Html.EditorFor(model => model.Namn)
-            @Html.ValidationMessageFor(model => model.Namn)
         </div>
-        <br />
-        <div class="editor-field">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.Tel) *
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Tel)
+
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Tel)
+                @Html.ValidationMessageFor(model => model.Tel)
             </div>
-            @Html.EditorFor(model => model.Tel)
-            @Html.ValidationMessageFor(model => model.Tel)
         </div>
-        <br />
-        <div class="editor-field">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.Email) *
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email)
+
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
             </div>
-            @Html.EditorFor(model => model.Email)
-            @Html.ValidationMessageFor(model => model.Email)
         </div>
-        <br />
-        <div class="editor-field">
-            <div class="editor-label">
-                @Html.LabelFor(model => model.Hemsida) *
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Hemsida)
+
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Hemsida)
+                @Html.ValidationMessageFor(model => model.Hemsida)
             </div>
-            @Html.EditorFor(model => model.Hemsida)
-            @Html.ValidationMessageFor(model => model.Hemsida)
-            <br>
-            <label style="font-size:12px; padding-left:20px;">ex:http://www.example.se</label>
         </div>
-        <br />
         <p class="info-create">
-            @Html.LabelFor(model => model.MerInfo) *
+            Mer info*:
         </p>
-        <div class="editor-field">
-            @Html.TextAreaFor(model => model.MerInfo)
-            @Html.ValidationMessageFor(model => model.MerInfo)
+ 
+        <div class="form-group">
+            @Html.LabelFor(model => model.MerInfo)
+
+            <div class="editor-field">
+                @Html.TextAreaFor(model => model.MerInfo, new { @class = "form-control col-sm-5" })
+                @Html.ValidationMessageFor(model => model.MerInfo)
+            </div>
         </div>
-        <br />
-        <div class="g-recaptcha" data-sitekey="6LenJQYTAAAAANpcS_cLoZ9lX5gfZGKqEq3xS-3z"></div>
+        <hr />
+        <div class="hidden-sm hidden-xs g-recaptcha" data-sitekey="6LenJQYTAAAAANpcS_cLoZ9lX5gfZGKqEq3xS-3z"></div>
         @if (ViewBag.Message != null)
         {
             <span class="recaptcha-span">
@@ -124,13 +137,12 @@
             </span>
         }
         <hr />
-        <p class="end-form-create">
-            @Html.ActionLink("Tillbaka", "Index")
-            <input type="submit" value="Lägg till" />
+        <p>
+            <input class="btn btn-md btn-primary" type="submit" value="Lägg till" />
         </p>
-        <br />
-        <br />
-        <br />
     </fieldset>
-}
-
+    }
+</div>
+<div>
+    @Html.ActionLink("Tillbaka", "Index")
+</div>

@@ -111,8 +111,6 @@
     font-family: Arial Black;
     font-size: 14px;
     font-style: normal;
-    height: 41px;
-    line-height: 41px;
     padding-left: 10px;
     text-decoration: none;
     text-align: left;
@@ -192,7 +190,8 @@
     text-decoration: none;
     text-align: left;
 }
-/*************textbox***********/
+/*/*************textbox***********/
+/*
 .editor-field > textarea {
     margin-left:20px;
     display:inline-block;
@@ -208,10 +207,8 @@
 }
 .editor-field > select,
 .editor-field > input {
-    display:inline-block;
     border: 1px solid #e5e5e5;
     font-size: 14px;
-
     padding: 10px;
     border-radius: 0px 5px 5px 0px;
     -webkit-transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
@@ -219,7 +216,6 @@
     -ms-transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     -o-transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-    margin-left: -5px;
 }
 .editor-field > select:focus,
 .editor-field > textarea:focus,
@@ -273,7 +269,7 @@
     box-shadow: 2px 2px 4px #262626;
     -moz-box-shadow: 2px 2px 4px #262626;
     -webkit-box-shadow: 2px 2px 4px #262626;
-}
+}*/
 /**************endfieldset*************/
 .btn-create{
     margin:25px auto;
@@ -297,8 +293,8 @@
     font-style: normal;
     height: 41px;
     line-height: 41px;
-    width: 100px;
     padding-left: 28px;
+    padding-right: 10px;
     text-decoration: none;
     text-align: left;
 }
@@ -315,8 +311,6 @@
 ***********layout***************
 ******************************/
 .header-page {
-    position:fixed;
-    top:0px;
     background-color: Black;
     width: 100%;
     color:white;
@@ -359,9 +353,10 @@
     top: 1px;
 }
 .body-page {
+    text-align:center;
     background:#fff;
-    width: 70%;
-    margin:95px auto;
+    width: 85%;
+    margin:20px auto;
     padding-top: 20px;
     border-radius: 7px 7px 7px 7px;
     -moz-border-radius: 7px 7px 7px 7px;
