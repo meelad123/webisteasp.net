@@ -16,46 +16,58 @@ namespace praktik.Controllers
         //
         // GET: /Home/
 
-        public ActionResult Index(int? page, string filter, string sorting)
+        public ActionResult Index(int? page, string filter, string sorting, string print)
         {
             List<string> aL = Activity.getActivityName();
             ViewBag.ActivityList = aL;
 
             ViewBag.SortingParaDate = string.IsNullOrEmpty(sorting) ? "Datum desc" : "";
             ViewBag.SortingParaArr = sorting == "Arrangor" ? "Arrangor desc" : "Arrangor";
-            ViewBag.SortingParaOrt = sorting == "Ort"? "Ort desc" : "Ort";
+            ViewBag.SortingParaOrt = sorting == "Ort" ? "Ort desc" : "Ort";
 
 
             var activity = Activity.getAllActivities().AsQueryable();
 
-            if (filter != null && filter != "showAll")
-                activity = activity.Where(x => x.Activitet.StartsWith(filter.Trim()) || filter == null);
-            else
-                activity = Activity.getAllActivities().AsQueryable();
+           
+                if (filter != null && filter != "showAll")
+                    activity = activity.Where(x => x.Activitet.StartsWith(filter.Trim()) || filter == null);
+                else
+                    activity = Activity.getAllActivities().AsQueryable();
 
-            switch (sorting)
-            {
-                case "Arrangor desc":
-                    activity = activity.OrderByDescending(x => x.Arrangor);
-                    break;
-                case "Arrangor":
-                    activity = activity.OrderBy(x => x.Arrangor);
-                    break;
-                case "Ort desc":
-                    activity = activity.OrderByDescending(x => x.Ort);
-                    break;
-                case "Ort":
-                    activity = activity.OrderBy(x => x.Ort);
-                    break;
-                case "Datum desc":
-                    activity = activity.OrderByDescending(x => x.Datum);
-                    break;
-                default:
-                    activity = activity.OrderBy(x => x.Datum);
-                    break;
-            }
+                switch (sorting)
+                {
+                    case "Arrangor desc":
+                        activity = activity.OrderByDescending(x => x.Arrangor);
+                        break;
+                    case "Arrangor":
+                        activity = activity.OrderBy(x => x.Arrangor);
+                        break;
+                    case "Ort desc":
+                        activity = activity.OrderByDescending(x => x.Ort);
+                        break;
+                    case "Ort":
+                        activity = activity.OrderBy(x => x.Ort);
+                        break;
+                    case "Datum desc":
+                        activity = activity.OrderByDescending(x => x.Datum);
+                        break;
+                    default:
+                        activity = activity.OrderBy(x => x.Datum);
+                        break;
+                }
 
-            return View(activity.ToPagedList(page ?? 1, 10));
+                if (print != "print")
+                {
+                    ViewBag.printStatus = null;
+                    return View(activity.ToPagedList(page ?? 1, 10));
+                }
+                else
+                {
+                    ViewBag.printStatus = "print";
+                    return View(activity.ToPagedList(page ?? 1, 1000));
+                }
+
+
         }
 
         // GET: /Home/CreateActivity

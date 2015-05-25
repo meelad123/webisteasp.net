@@ -9,10 +9,27 @@
 }
 
 <div class="activity-filter">
-    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
-    {
-        if (ViewBag.ActivityList != null)
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    <div class="print-div">
+        @if (ViewBag.printStatus == null)
         {
+            <button class="btn btn-default btn-sm" name="print" value="print">
+                <span class="glyphicon glyphicon-print"></span>
+                Utskriftsversion
+            </button>
+        }
+        else
+        {
+            @Html.ActionLink("tillbaka", "Index", "Home", null, new { @class = "text-primary glyphicon glyphicon-chevron-left" })
+            <button id="btnPrint" class="btn btn-default btn-sm" name="print" value="print" onclick="printData()">
+                <span class="glyphicon glyphicon-print"></span>
+                Skriv ut
+            </button>
+        }
+    </div>
+    if (ViewBag.ActivityList != null)
+    {
             <select name="filter">
                 <option value="showAll">Alla aktiviteter</option>
                 @foreach (var item in ViewBag.ActivityList)
@@ -20,9 +37,9 @@
                     <option value="@item">@item</option>
                 }
             </select>
-        }
-        <input class="btn btn-default btn-sm" type="submit" value="Sök" />
     }
+    <input class="btn btn-default btn-sm" type="submit" value="Sök" />
+}
 </div>
 <div class="table-responsive">
     <table id="tbl-data" class="table">
