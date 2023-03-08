@@ -35,9 +35,10 @@ namespace Kalender_BL
             get { return _aDTO._id; }
             set { _aDTO._id = value; }
         }
+
         [Required(ErrorMessage = "Kan inte vara tom!")]
         [Display(Name = "Datum")]
-        [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{yy-MM-dd}", ApplyFormatInEditMode = false)]
         [DataType(DataType.DateTime, ErrorMessage="Fel datum format!")]
         public DateTime Datum
         { 
@@ -87,7 +88,7 @@ namespace Kalender_BL
             get { return _aDTO._email; }
             set { _aDTO._email = value; }
         }
-        [Required(ErrorMessage = "Kan inte vara tom!")]
+
         public string Hemsida
         {
             get { return _aDTO._hemsida; }

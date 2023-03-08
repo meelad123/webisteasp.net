@@ -115,3 +115,44 @@ D:\Github\webisteasp.net\praktik\praktik\bin\Kalender_DAL.pdb
 D:\Github\webisteasp.net\praktik\praktik\obj\Debug\praktik.csprojResolveAssemblyReference.cache
 D:\Github\webisteasp.net\praktik\praktik\obj\Debug\praktik.dll
 D:\Github\webisteasp.net\praktik\praktik\obj\Debug\praktik.pdb
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\praktik.dll.config
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\praktik.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\praktik.pdb
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\Kalender_BL.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\Newtonsoft.Json.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\PagedList.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\PagedList.Mvc.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\SimpleCrypto.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Net.Http.Formatting.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.Helpers.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.Http.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.Http.WebHost.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.Mvc.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.Razor.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.WebPages.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.WebPages.Razor.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\Kalender_DTO.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\Kalender_DAL.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\Kalender_BL.pdb
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\Newtonsoft.Json.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\PagedList.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\PagedList.Mvc.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Net.Http.Formatting.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.Http.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.Http.WebHost.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.Helpers.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.Mvc.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.Razor.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.WebPages.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\System.Web.WebPages.Razor.xml
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\Kalender_DTO.pdb
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\bin\Kalender_DAL.pdb
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\obj\Debug\praktik.csproj.AssemblyReference.cache
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\obj\Debug\praktik.csproj.CoreCompileInputs.cache
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\obj\Debug\praktik.csproj.CopyComplete
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\obj\Debug\praktik.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\praktik\obj\Debug\praktik.pdb

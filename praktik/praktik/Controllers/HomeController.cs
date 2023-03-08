@@ -108,21 +108,23 @@ namespace praktik.Controllers
                 }
                 else
                 {
-                    string url = b.Hemsida;
-                    if(!url.Contains("http://"))
-                    {
-                        url = "http://" + url;
-                        b.Hemsida = url;
-                    }
+                    //string url = b.Hemsida;
+                    //if(!url.Contains("http://"))
+                    //{
+                    //    url = "http://" + url;
+                    //    b.Hemsida = url;
+                    //}
                     Activity.insertActivity(b);
                     return RedirectToAction("Index");
                 }
             }
-            catch
+            catch (Exception er)
             {
-                List<string> aL = Activity.getActivityName();
-                ViewBag.ActivityList = aL;
-                return View();
+                throw er;
+                //System.Diagnostics.Debug.WriteLine(er);
+                //List<string> aL = Activity.getActivityName();
+                //ViewBag.ActivityList = aL;
+                //return View();
             }
         }
 
@@ -244,8 +246,9 @@ namespace praktik.Controllers
                     return View("Index", Activity.getAllActivities().ToList().ToPagedList(page ?? 1, 10));
                 }
             }
-            catch
+            catch (Exception er)
             {
+                System.Diagnostics.Debug.WriteLine(er);
                 return View();
             }
         }

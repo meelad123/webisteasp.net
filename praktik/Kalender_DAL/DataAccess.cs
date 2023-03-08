@@ -102,8 +102,9 @@ namespace Kalender_DAL
 
         public static void insertActivity(Activity_DTO a) 
         {
+            string date_time = a._date.ToString("yyMMdd");
             string SQLInsertToBook = "INSERT INTO Kalender([Date],[Aktivitet],[Arrangor],[Ort],[Namn],[Tel],[Email],[Hemsida],[MerInfo]) " +
-                            "Values ('" + a._date + "', '" + a._activity + "','" + a._arranger + "','" + a._ort + "','" + a._name + "','" + a._tel
+                            "Values (CONVERT(DATETIME, '" + date_time + "', 5), '" + a._activity + "','" + a._arranger + "','" + a._ort + "','" + a._name + "','" + a._tel
                             + "','" + a._email + "','" + a._hemsida + "','" + a._merinfo + "' ) ";
             string _connectionString = DataSource.GetConnectionString("kalender");
             SqlConnection con = new SqlConnection(_connectionString);

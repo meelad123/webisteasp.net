@@ -12,3 +12,12 @@ D:\Github\webisteasp.net\praktik\Kalender_DAL\bin\Release\Kalender_DTO.pdb
 D:\Github\webisteasp.net\praktik\Kalender_DAL\obj\Release\Kalender_DAL.csprojResolveAssemblyReference.cache
 D:\Github\webisteasp.net\praktik\Kalender_DAL\obj\Release\Kalender_DAL.dll
 D:\Github\webisteasp.net\praktik\Kalender_DAL\obj\Release\Kalender_DAL.pdb
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DAL\bin\Release\Kalender_DAL.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DAL\bin\Release\Kalender_DAL.pdb
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DAL\bin\Release\Kalender_DTO.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DAL\bin\Release\Kalender_DTO.pdb
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DAL\obj\Release\Kalender_DAL.csproj.AssemblyReference.cache
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DAL\obj\Release\Kalender_DAL.csproj.CoreCompileInputs.cache
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DAL\obj\Release\Kalender_DAL.csproj.CopyComplete
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DAL\obj\Release\Kalender_DAL.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DAL\obj\Release\Kalender_DAL.pdb

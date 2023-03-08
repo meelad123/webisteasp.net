@@ -12,3 +12,9 @@ D:\Github\webisteasp.net\praktik\Kalender_DTO\bin\Debug\Kalender_DTO.pdb
 D:\Github\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.csprojResolveAssemblyReference.cache
 D:\Github\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.dll
 D:\Github\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.pdb
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DTO\bin\Debug\Kalender_DTO.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DTO\bin\Debug\Kalender_DTO.pdb
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.csproj.AssemblyReference.cache
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.csproj.CoreCompileInputs.cache
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.dll
+C:\Users\Meelad Al-Ghareeb\Documents\work-2\kalendar-databas\webisteasp.net\praktik\Kalender_DTO\obj\Debug\Kalender_DTO.pdb

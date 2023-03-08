@@ -80,7 +80,7 @@
                         <hr>Mer info: @item.MerInfo">
                         <td>
                             @{
-                    string datum = item.Datum.Date.ToString("dd/MM-yyyy");
+                    string datum = item.Datum.ToString("yy-MM-dd");
                             }
                             @Html.DisplayFor(modelItem => datum)
                         </td>

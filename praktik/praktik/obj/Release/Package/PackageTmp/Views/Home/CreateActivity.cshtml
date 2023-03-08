@@ -1,13 +1,13 @@
 ﻿@model Kalender_BL.Activity
 
 @{
-    ViewBag.Title = "CreateActivity";
+    ViewBag.Title = "Skapa";
     Layout = "~/Views/shared/_LayoutPage1.cshtml";
 }
 
 <script type="text/javascript">
     $(function () {
-        $("input:text.date-txb").datepicker({ dateFormat: "dd/MM/yy" });
+        $("input:text.date-txb").datepicker({ dateFormat: "yy-MM-dd" });
         $("input, select").addClass("form-control");
         $("form").addClass("form-horizontal");
         $(".editor-field").addClass("col-sm-5");
